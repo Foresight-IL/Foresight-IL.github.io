@@ -91,18 +91,253 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container my-5">
       <div class="row">
         <div class="col-12">
           <h2 class="center mb-3">Planning Visualizations</h2>
         </div>
       </div>
       <div class="col-12 center img">
-        <img class="center" src="./mfiles/figs/planning_v2.png" style="width:100%"></img>
+        <img class="center" src="./mfiles/figs/planning_v2.png" style="width:100%">
       </div>
     </div>
 
-  </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center mb-3">Comparing performance with baselines</h2>
+          <p class="text-center mt-2">
+            Visual comparison of planning outcomes between <b>ForesightIL</b> and baseline methods. By leveraging
+            latent-space rollouts and predictive reasoning in a learned world model, ForesightIL consistently selects
+            goal-directed actions, leading to more successful task completions across diverse scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="body-content" style="padding-bottom: 0px;">
+      <div class="container">
+        <h4 style="text-align: center;">Block Pushing</h4>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2%; margin-bottom: 40px;">
+          <div style="width: 34%;">
+            <video style="width: 100%; height: auto;" muted autoplay loop controls>
+              <source src="./mfiles/env/ForesightIL/blockpush_plan.mp4" type="video/mp4">
+            </video>
+            <div style="text-align: center;">
+              <h4 class="with-whitebackdrop">Ours</h4>
+            </div>
+          </div>
+          <div style="width: 34%;">
+            <video style="width: 100%; height: auto;" muted autoplay loop controls>
+              <source src="./mfiles/env/ForesightIL/blockpush_no_plan.mp4" type="video/mp4">
+            </video>
+            <div style="text-align: center;">
+              <h4 class="with-whitebackdrop">Diffusion Policy</h4>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="text-align: center;">LIBERO Goal</h4>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2%; margin-bottom: 40px;">
+          <div style="width: 34%;">
+            <video style="width: 100%; height: auto;" muted autoplay loop controls>
+              <source src="./mfiles/env/ForesightIL/libero_goal_plan.mp4" type="video/mp4">
+            </video>
+            <div style="text-align: center;">
+              <h4 class="with-whitebackdrop">Ours</h4>
+            </div>
+          </div>
+          <div style="width: 34%;">
+            <video style="width: 100%; height: auto;" muted autoplay loop controls>
+              <source src="./mfiles/env/ForesightIL/libero_goal_no_plan.mp4" type="video/mp4">
+            </video>
+            <div style="text-align: center;">
+              <h4 class="with-whitebackdrop">Diffusion Policy</h4>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="text-align: center;">Push-T</h4>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2%; margin-bottom: 40px;">
+          <div style="width: 34%;">
+            <video style="width: 100%; height: auto;" muted autoplay loop controls>
+              <source src="./mfiles/env/ForesightIL/pusht_plan.mp4" type="video/mp4">
+            </video>
+            <div style="text-align: center;">
+              <h4 class="with-whitebackdrop">Ours</h4>
+            </div>
+          </div>
+          <div style="width: 34%;">
+            <video style="width: 100%; height: auto;" muted autoplay loop controls>
+              <source src="./mfiles/env/ForesightIL/pusht_no_plan.mp4" type="video/mp4">
+            </video>
+            <div style="text-align: center;">
+              <h4 class="with-whitebackdrop">Diffusion Policy</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center mb-3">Real-World Robotic Manipulation Results</h2>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-content" style="padding-bottom: 10px;">
+      <div class="container">
+        <div class="container-fluid" style="max-width: 100%; padding: 0;">
+          <div class="row d-flex justify-content-center" style="display: flex; flex-wrap: nowrap;">
+
+            <!-- First Column -->
+            <div class="carousel-column" style="flex: 0 0 45%; padding: 10px;">
+              <div id="indicator10" class="carousel slide mb-3" data-bs-ride="false">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#indicator10" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#indicator10" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#indicator10" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#indicator10" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div style="display: flex; justify-content: center; max-height: 250px; overflow: hidden;">
+                      <video class="img-fluid speedup" style="max-height: 250px; margin: auto;" muted autoplay loop
+                        controls>
+                        <source src="./mfiles/env/ForesightIL/pp_0.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div style="text-align: center;">
+                      <h4 class="caption with-whitebackdrop">Success Example 1</h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div style="display: flex; justify-content: center; max-height: 250px; overflow: hidden;">
+                      <video class="img-fluid speedup" style="max-height: 250px; margin: auto;" muted autoplay loop
+                        controls>
+                        <source src="./mfiles/env/ForesightIL/pp_1.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div style="text-align: center;">
+                      <h4 class="caption with-whitebackdrop">Success Example 2</h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div style="display: flex; justify-content: center; max-height: 250px; overflow: hidden;">
+                      <video class="img-fluid speedup" style="max-height: 250px; margin: auto;" muted autoplay loop
+                        controls>
+                        <source src="./mfiles/env/ForesightIL/pp_2.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div style="text-align: center;">
+                      <h4 class="caption with-whitebackdrop">Success Example 3</h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div style="display: flex; justify-content: center; max-height: 250px; overflow: hidden;">
+                      <video class="img-fluid speedup" style="max-height: 250px; margin: auto;" muted autoplay loop
+                        controls>
+                        <source src="./mfiles/env/ForesightIL/pp_3.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div style="text-align: center;">
+                      <h4 class="caption with-whitebackdrop">Success Example 4</h4>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#indicator10" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon with-backdrop" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#indicator10" data-bs-slide="next">
+                  <span class="carousel-control-next-icon with-backdrop" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Second Column -->
+            <div class="carousel-column" style="flex: 0 0 45%; padding: 10px;">
+              <div id="indicator11" class="carousel slide mb-3" data-bs-ride="false">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#indicator11" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#indicator11" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#indicator11" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div style="display: flex; justify-content: center; max-height: 250px; overflow: hidden;">
+                      <video class="img-fluid speedup" style="max-height: 250px; margin: auto;" muted autoplay loop
+                        controls>
+                        <source src="./mfiles/env/ForesightIL/pp_fail_0.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div style="text-align: center;">
+                      <h4 class="caption with-whitebackdrop">Failure Example 1</h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div style="display: flex; justify-content: center; max-height: 250px; overflow: hidden;">
+                      <video class="img-fluid speedup" style="max-height: 250px; margin: auto;" muted autoplay loop
+                        controls>
+                        <source src="./mfiles/env/ForesightIL/pp_fail_1.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div style="text-align: center;">
+                      <h4 class="caption with-whitebackdrop">Failure Example 2</h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div style="display: flex; justify-content: center; max-height: 250px; overflow: hidden;">
+                      <video class="img-fluid speedup" style="max-height: 250px; margin: auto;" muted autoplay loop
+                        controls>
+                        <source src="./mfiles/env/ForesightIL/pp_fail_2.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div style="text-align: center;">
+                      <h4 class="caption with-whitebackdrop">Failure Example 3</h4>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#indicator11" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon with-backdrop" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#indicator11" data-bs-slide="next">
+                  <span class="carousel-control-next-icon with-backdrop" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Playback speed script (only applies to videos with class 'speedup') -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const fastVideos = document.querySelectorAll("video.speedup");
+        fastVideos.forEach(video => {
+          video.playbackRate = 2.0;
+        });
+      });
+    </script>
+
+
 </body>
 
 </html>
