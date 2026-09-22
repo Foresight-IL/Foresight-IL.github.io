@@ -1,0 +1,3261 @@
+{
+  "bc_resolution": [
+    1448,
+    724
+  ],
+  "wm_bc_resolution": [
+    1448,
+    940
+  ],
+  "camera_rectangles": [
+    [
+      0,
+      2,
+      960,
+      720
+    ],
+    [
+      968,
+      0,
+      480,
+      360
+    ],
+    [
+      968,
+      364,
+      480,
+      360
+    ]
+  ],
+  "palette": {
+    "policy": "#007CB6",
+    "planning": "#CA8A2B",
+    "value": "#188476",
+    "ink": "#27343C"
+  },
+  "clips": [
+    {
+      "asset": "assets/videos/toy-kitchen.mp4",
+      "source_episode": "fruit/wm_bc_20260913_022245",
+      "source_mapping": "icra27_assets/video_edit/toy_kitchen_demo_frames.csv",
+      "frames": 542,
+      "duration": 18.066666666666666,
+      "mode_alignment": "Same verified executed-chunk labels and source frames as the submission edit.",
+      "resolution": [
+        1448,
+        940
+      ],
+      "uncertainty_display": "Recorded signal / threshold of the currently executed action chunk; step trace held over that chunk.",
+      "timeline": "Executed modes on an absolute source-seconds axis; the cursor follows source frames, including speed changes and the final hold.",
+      "sha256": "87185bc13c07b3aca2047544b9de1476a0a03f48c5c7dacbc61938b3b95e505c"
+    },
+    {
+      "asset": "assets/videos/desk-cleanup.mp4",
+      "source_episode": "table_cleanup/wm_bc_20260913_015538",
+      "source_mapping": "icra27_assets/video_edit/desk_cleanup_demo_frames.csv",
+      "frames": 690,
+      "duration": 23.0,
+      "mode_alignment": "Same verified executed-chunk labels and source frames as the submission edit.",
+      "resolution": [
+        1448,
+        940
+      ],
+      "uncertainty_display": "Recorded signal / threshold of the currently executed action chunk; step trace held over that chunk.",
+      "timeline": "Executed modes on an absolute source-seconds axis; the cursor follows source frames, including speed changes and the final hold.",
+      "sha256": "1e0c61a7c384cc981f6212a34975ce5e6da9e452649d0c9665412a2ca038bd70"
+    },
+    {
+      "asset": "assets/videos/toy-kitchen-bc.mp4",
+      "source_episode": "bc_rollouts/fruit/bc_20260910_041100",
+      "frames": 521,
+      "duration": 17.366666666666667,
+      "timing": "Observed frame sets at their recorded timestamps, final frame held 1 s.",
+      "observations": 36,
+      "comparison_note": "Earlier trained policy; illustrative low-rate recording, not a matched-policy comparison.",
+      "sha256": "78a44b747d3bcadbaa6a381dfe3b40e8b808d9dc0ac74e843570821fd733b706"
+    },
+    {
+      "asset": "assets/videos/desk-cleanup-bc.mp4",
+      "source_episode": "bc_rollouts/table_cleanup/bc_20260913_015019",
+      "frames": 633,
+      "duration": 21.1,
+      "frame_map": [
+        {
+          "source_frame": 0,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 2,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 4,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 6,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 8,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 10,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 12,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 14,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 16,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 18,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 20,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 22,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 24,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 26,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 28,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 30,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 32,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 34,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 36,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 38,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 40,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 42,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 44,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 46,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 48,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 50,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 52,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 54,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 56,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 58,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 60,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 62,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 64,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 66,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 68,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 70,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 72,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 74,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 76,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 78,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 80,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 82,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 84,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 86,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 88,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 90,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 92,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 94,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 96,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 98,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 100,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 102,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 104,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 106,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 108,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 110,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 112,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 114,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 116,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 118,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 120,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 122,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 124,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 126,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 128,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 130,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 132,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 134,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 136,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 138,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 140,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 142,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 144,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 146,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 148,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 150,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 152,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 154,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 156,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 158,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 160,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 162,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 164,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 166,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 168,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 170,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 172,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 174,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 175,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 176,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 177,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 178,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 179,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 180,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 181,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 182,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 183,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 184,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 185,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 186,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 187,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 188,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 189,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 190,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 191,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 192,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 193,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 194,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 195,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 196,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 197,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 198,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 199,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 200,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 201,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 202,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 203,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 204,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 205,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 206,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 207,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 208,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 209,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 210,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 211,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 212,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 213,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 214,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 215,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 216,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 217,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 218,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 219,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 220,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 221,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 222,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 223,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 224,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 225,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 226,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 227,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 228,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 229,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 230,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 231,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 232,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 233,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 234,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 235,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 236,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 237,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 238,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 239,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 240,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 241,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 242,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 243,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 244,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 245,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 246,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 247,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 248,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 249,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 250,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 251,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 252,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 253,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 254,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 255,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 256,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 257,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 258,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 259,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 260,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 261,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 262,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 263,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 264,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 265,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 266,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 267,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 268,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 269,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 270,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 271,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 272,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 273,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 274,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 275,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 276,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 277,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 278,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 279,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 280,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 281,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 282,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 283,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 284,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 285,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 286,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 287,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 288,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 289,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 290,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 291,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 292,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 293,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 294,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 295,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 296,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 297,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 298,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 299,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 300,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 301,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 302,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 303,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 304,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 305,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 306,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 307,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 308,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 309,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 310,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 311,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 312,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 313,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 314,
+          "speed": 1,
+          "held": false
+        },
+        {
+          "source_frame": 315,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 317,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 319,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 321,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 323,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 325,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 327,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 329,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 331,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 333,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 335,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 337,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 339,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 341,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 343,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 345,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 347,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 349,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 351,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 353,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 355,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 357,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 359,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 361,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 363,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 365,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 367,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 369,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 371,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 373,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 375,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 377,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 379,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 381,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 383,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 385,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 387,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 389,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 391,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 393,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 395,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 397,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 399,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 401,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 403,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 405,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 407,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 409,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 411,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 413,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 415,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 417,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 419,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 421,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 423,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 425,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 427,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 429,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 431,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 433,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 435,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 437,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 439,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 441,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 443,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 445,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 447,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 449,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 451,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 453,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 455,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 457,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 459,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 461,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 463,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 465,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 467,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 469,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 471,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 473,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 475,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 477,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 479,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 481,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 483,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 485,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 487,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 489,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 491,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 493,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 495,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 497,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 499,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 501,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 503,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 505,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 507,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 509,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 511,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 513,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 515,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 517,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 519,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 521,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 523,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 525,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 527,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 529,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 531,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 533,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 535,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 537,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 539,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 541,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 543,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 545,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 547,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 549,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 551,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 553,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 555,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 557,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 559,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 561,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 563,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 565,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 567,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 569,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 571,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 573,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 575,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 577,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 579,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 581,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 583,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 585,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 587,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 589,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 591,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 593,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 595,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 597,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 599,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 601,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 603,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 605,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 607,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 609,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 611,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 613,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 615,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 617,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 619,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 621,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 623,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 625,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 627,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 629,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 631,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 633,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 635,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 637,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 639,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 641,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 643,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 645,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 647,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 649,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 651,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 653,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 655,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 657,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 659,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 661,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 663,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 665,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 667,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 669,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 671,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 673,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 675,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 677,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 679,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 681,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 683,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 685,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 687,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 689,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 691,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 693,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 695,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 697,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 699,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 701,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 703,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 705,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 707,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 709,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 711,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 713,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 715,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 717,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 719,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 721,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 723,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 725,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 727,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 729,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 731,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 733,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 735,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 737,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 739,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 741,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 743,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 745,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 747,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 749,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 751,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 753,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 755,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 757,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 759,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 761,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 763,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 765,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 767,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 769,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 771,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 773,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 775,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 777,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 779,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 781,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 783,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 785,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 787,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 789,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 791,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 793,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 795,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 797,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 799,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 801,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 803,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 805,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 807,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 809,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 811,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 813,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 815,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 817,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 819,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 821,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 823,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 825,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 827,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 829,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 831,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 833,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 835,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 837,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 839,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 841,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 843,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 845,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 847,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 849,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 851,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 853,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 855,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 857,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 859,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 861,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 863,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 865,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 867,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 869,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 871,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 873,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 875,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 877,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 879,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 881,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 883,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 885,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 887,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 889,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 891,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 893,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 895,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 897,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 899,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 901,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 903,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 905,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 907,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 909,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 911,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 913,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 915,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 917,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 919,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 921,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 923,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 925,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 927,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 929,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 931,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 933,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 935,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 937,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 939,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 941,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 943,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 945,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 947,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 949,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 951,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 953,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 955,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 957,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 959,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 961,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 963,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 965,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 967,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 969,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 971,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 973,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 975,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 977,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 979,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 981,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 983,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 985,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 987,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 989,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 991,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 993,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 995,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 997,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 999,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1001,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1003,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1005,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1007,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1009,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1011,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1013,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1015,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1017,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1019,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1021,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1023,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1025,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1027,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1029,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1031,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1033,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1035,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1037,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1039,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1041,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1043,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1045,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1047,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1049,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1051,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1053,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1055,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1057,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1059,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1061,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1063,
+          "speed": 2,
+          "held": false
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        },
+        {
+          "source_frame": 1063,
+          "speed": 0,
+          "held": true
+        }
+      ],
+      "sha256": "ad955742a4503cb9330509b746680e711af782b3e220d3ae9ef8b8620bb351a2"
+    }
+  ],
+  "overview": {
+    "asset": "assets/videos/overview.mp4",
+    "duration_seconds": 179,
+    "sha256": "64a561375855c4e42594957520e9796f44207f04dbc1a48ab1a5be2983ecd327",
+    "website_only": true,
+    "attribution_line_removed": true,
+    "submission_number_removed": true,
+    "new_camera_edits_embedded": true
+  }
+}
