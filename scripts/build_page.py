@@ -70,6 +70,7 @@ html=f'''<!doctype html>
 <section id="simulation" class="section">
   <h2>Simulation Experiments</h2>
   <p>We compare planning with direct policy execution on Push-T, LIBERO Goal, and Block Pushing. The videos show sample rollouts from the original experiments; the table reports the current benchmark results. Push-T is measured by maximum target coverage, while the other tasks use success rate.</p>
+  <p class="simulation-guide"><strong>Inside each video:</strong> the first (top) row shows the ground-truth environment, the second (bottom) row shows world-model predictions, and the second (right) column shows the goal.</p>
   <div class="sim-grid">{sim_videos}</div>
   <h3 class="subsection-title">Simulation results</h3>{result('simulation')}
 </section>
@@ -80,13 +81,13 @@ html=f'''<!doctype html>
   <article class="task" id="toy-kitchen"><h3>Toy Kitchen</h3><p class="task-description">Place both toy-food objects in the pot, then put on the lid.</p>
   <div class="video-pair">
     {video('toy-kitchen','Toy Kitchen with ForesightIL','Both food objects reach the pot and the lid is placed.','<span class="method-name">ForesightIL</span> <span class="video-subtitle">WM + BC</span>',shape='gated')}
-    {video('toy-kitchen-bc','Toy Kitchen with BC only','<strong>Failure: incomplete sequence.</strong> After placing the first food object, the rollout makes no further progress on the remaining food and lid steps.','BC only')}
+    {video('toy-kitchen-bc','Toy Kitchen with BC only','<strong>Failure: incomplete sequence.</strong> After placing the first food object, the rollout makes no further progress on the remaining food and lid steps.','BC only',shape='gated')}
   </div>
   <p class="note">The BC clip contains low-rate observation frames at their recorded timing and uses an earlier trained policy. It is an illustrative failure example, not a matched-policy comparison.</p></article>
   <article class="task" id="desk-cleanup"><h3>Long-Horizon Desk Cleanup</h3><p class="task-description">Insert flowers into the vase, hand the dish across and place it in the tray, and put the ring on the stand.</p>
   <div class="video-pair">
     {video('desk-cleanup','Desk Cleanup with ForesightIL','The robot completes all three subtasks, including the dish handover.','<span class="method-name">ForesightIL</span> <span class="video-subtitle">WM + BC</span>',shape='gated')}
-    {video('desk-cleanup-bc','Desk Cleanup with BC only','<strong>Failure: missed insertion.</strong> The flowers land beside the vase and remain on the table while the robot continues with later subtasks.','BC only')}
+    {video('desk-cleanup-bc','Desk Cleanup with BC only','<strong>Failure: missed insertion.</strong> The flowers land beside the vase and remain on the table while the robot continues with later subtasks.','BC only',shape='gated')}
   </div></article>
   <p class="video-legend"><span class="key policy"></span> Model-free policy <span class="key planning"></span> Model-based plan. Mode labels and colored timelines follow the executed action. The trace shows its uncertainty score divided by the planning threshold (plan at ≥ 1), with a moving cursor in recorded time. Playback speed is marked in each clip.</p>
   <h3 class="subsection-title">Real-robot success rates</h3>{result('robots')}

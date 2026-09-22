@@ -254,7 +254,12 @@
     "timing": "Observed frame sets at their recorded timestamps, final frame held 1 s.",
     "observations": 36,
     "comparison_note": "Earlier trained policy; illustrative low-rate recording, not a matched-policy comparison.",
-    "sha256": "78a44b747d3bcadbaa6a381dfe3b40e8b808d9dc0ac74e843570821fd733b706"
+    "resolution": [
+      1448,
+      940
+    ],
+    "timeline": "Model-free execution throughout; elapsed recorded seconds from the first observation, frozen during the final hold. No uncertainty values are displayed.",
+    "sha256": "4bdb6a6cb050cd5c422069d9da93cd7bc5a1a12c7f6e6b3298c0bee0da8f97b6"
   },
   {
     "asset": "assets/videos/desk-cleanup-bc.mp4",
@@ -3428,7 +3433,12 @@
         "held": true
       }
     ],
-    "sha256": "ad955742a4503cb9330509b746680e711af782b3e220d3ae9ef8b8620bb351a2"
+    "resolution": [
+      1448,
+      940
+    ],
+    "timeline": "Model-free execution throughout; recorded source seconds follow the frame mapping and freeze during the final hold. No uncertainty values are displayed.",
+    "sha256": "1909471a223f5a7d4d47fdca9d78b19c376136aa529877864a06b1c2c33d9b9f"
   },
   {
     "asset": "assets/images/hero.webp",

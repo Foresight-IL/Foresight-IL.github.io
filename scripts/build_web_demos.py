@@ -109,6 +109,39 @@ class ExecutionTrace:
         d.ellipse((x-8,y-8,x+8,y+8),fill=color,outline='white',width=2)
         return im
 
+class PolicyTimeline:
+    """Match the WM+BC canvas using only recorded BC timing, with no gate values."""
+    def __init__(self,last):
+        self.last=last
+        self.x0,self.x1=370,1418
+        self.base=Image.new('RGB',GATED_SIZE,'white');d=ImageDraw.Draw(self.base)
+        d.line((0,724,1448,724),fill='#E4E9EC',width=2)
+        d.text((24,739),'Controller',font=FONTS[26,False],fill=INK)
+        d.text((24,775),'BC only',font=FONTS[42,True],fill=BLUE)
+        d.text((24,836),'No planning',font=FONTS[24,False],fill=INK)
+        d.rectangle((370,738,386,754),fill=BLUE)
+        d.text((395,731),'Model-free',font=FONTS[24,False],fill=INK)
+        label='Recorded time (s)'
+        d.text((self.x1-d.textlength(label,font=FONTS[22,False]),733),label,font=FONTS[22,False],fill=INK)
+        d.rectangle((self.x0,768,self.x1,862),fill='#EAF3F8')
+        label='Model-free policy throughout'
+        d.text(((self.x0+self.x1-d.textlength(label,font=FONTS[28,False]))/2,799),label,font=FONTS[28,False],fill=BLUE)
+        d.rectangle((self.x0,876,self.x1,892),fill=BLUE)
+        ticks=[(0,'0')]+[(t,str(t)) for t in range(5,math.ceil(last),5) if t<last-1.3]+[(last,f'{last:.2f}')]
+        for time,label in ticks:
+            x=self.x(time);width=d.textlength(label,font=FONTS[22,False])
+            d.line((x,894,x,900),fill=INK,width=2)
+            d.text((max(self.x0,min(x-width/2,self.x1-width)),903),label,font=FONTS[22,False],fill=INK)
+
+    def x(self,time):return round(self.x0+time/self.last*(self.x1-self.x0))
+
+    def render(self,cameras,time):
+        im=self.base.copy();im.paste(cameras,(0,0));d=ImageDraw.Draw(im)
+        d.text((24,890),f't = {time:.2f} s',font=FONTS[26,True],fill=INK)
+        x=self.x(time)
+        d.line((x,869,x,897),fill=INK,width=3)
+        return im
+
 def wm_clip(name,tag,episode):
     rows=list(csv.DictReader((SOURCE/'icra27_assets/video_edit'/f'{tag}_frames.csv').open()))
     audit=json.loads((SOURCE/'icra27_assets/video_edit'/f'{tag}_audit.json').read_text())
@@ -143,14 +176,16 @@ def fruit_bc():
     for r in rows:
         cameras=[Image.open(base/'frames_full'/f'{r["n"]:05d}_{cam}.jpg').convert('RGB') for cam in CAMS]
         images.append(compose(cameras,'bc',1,observations=True))
-    frames=math.ceil((times[-1]-times[0]+1)*30);dest=VIDEOS/'toy-kitchen-bc.mp4';proc=encoder(dest)
+    duration=times[-1]-times[0];timeline=PolicyTimeline(duration)
+    frames=math.ceil((duration+1)*30);dest=VIDEOS/'toy-kitchen-bc.mp4';proc=encoder(dest,GATED_SIZE)
     for i in range(frames):
         index=bisect.bisect_right(times,times[0]+i/30)-1
-        proc.stdin.write(images[index].tobytes())
+        proc.stdin.write(timeline.render(images[index],min(i/30,duration)).tobytes())
     proc.stdin.close();assert proc.wait()==0
     return {'asset':str(dest.relative_to(SITE)),'source_episode':'bc_rollouts/fruit/bc_20260910_041100',
             'frames':frames,'duration':frames/30,'timing':'Observed frame sets at their recorded timestamps, final frame held 1 s.',
             'observations':len(rows),'comparison_note':'Earlier trained policy; illustrative low-rate recording, not a matched-policy comparison.',
+            'resolution':GATED_SIZE,'timeline':'Model-free execution throughout; elapsed recorded seconds from the first observation, frozen during the final hold. No uncertainty values are displayed.',
             'sha256':sha(dest)}
 
 def desk_bc():
@@ -162,18 +197,22 @@ def desk_bc():
         speed=1 if 5.8<=i/30<10.5 else 2
         rows.append({'source_frame':i,'speed':speed,'held':False});i+=speed
     rows.extend({'source_frame':count-1,'speed':0,'held':True} for _ in range(30))
-    dest=VIDEOS/'desk-cleanup-bc.mp4';proc=encoder(dest);last=-1;images=None
+    timeline=PolicyTimeline(count/30)
+    dest=VIDEOS/'desk-cleanup-bc.mp4';proc=encoder(dest,GATED_SIZE);last=-1;images=None
     for row in rows:
         while last<row['source_frame']:
             images=[]
             for cap in caps:
                 ok,f=cap.read();assert ok;images.append(f)
             last+=1
-        proc.stdin.write(compose(images,'bc',row['speed'],row['held']).tobytes())
+        im=compose(images,'bc',row['speed'],row['held'])
+        proc.stdin.write(timeline.render(im,row['source_frame']/30).tobytes())
     proc.stdin.close();assert proc.wait()==0
     for cap in caps:cap.release()
     return {'asset':str(dest.relative_to(SITE)),'source_episode':'bc_rollouts/table_cleanup/bc_20260913_015019',
-            'frames':len(rows),'duration':len(rows)/30,'frame_map':rows,'sha256':sha(dest)}
+            'frames':len(rows),'duration':len(rows)/30,'frame_map':rows,'resolution':GATED_SIZE,
+            'timeline':'Model-free execution throughout; recorded source seconds follow the frame mapping and freeze during the final hold. No uncertainty values are displayed.',
+            'sha256':sha(dest)}
 
 def poster(name,time):
     cap=cv2.VideoCapture(str(VIDEOS/(name+'.mp4')));cap.set(cv2.CAP_PROP_POS_MSEC,time*1000)
@@ -221,5 +260,5 @@ if __name__=='__main__':
     overview()
     overview_report={'asset':'assets/videos/overview.mp4','duration_seconds':179,'sha256':sha(VIDEOS/'overview.mp4'),
                      'website_only':True,'attribution_line_removed':True,'submission_number_removed':True,'new_camera_edits_embedded':True}
-    (SITE/'scripts/demo_manifest.json').write_text(json.dumps({'bc_resolution':SIZE,'wm_bc_resolution':GATED_SIZE,'camera_rectangles':RECTS,'palette':{'policy':BLUE,'planning':AMBER,'value':TEAL,'ink':INK},'clips':reports,'overview':overview_report},indent=2)+'\n')
+    (SITE/'scripts/demo_manifest.json').write_text(json.dumps({'bc_resolution':GATED_SIZE,'wm_bc_resolution':GATED_SIZE,'camera_rectangles':RECTS,'palette':{'policy':BLUE,'planning':AMBER,'value':TEAL,'ink':INK},'clips':reports,'overview':overview_report},indent=2)+'\n')
     print('Website overview rebuilt; original submission files untouched.',flush=True)
