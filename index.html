@@ -27,8 +27,22 @@
 
 <section id="simulation" class="section">
   <h2>Simulation Experiments</h2>
-  <p>We compare planning with direct policy execution on Push-T, LIBERO Goal, and Block Pushing. The videos show sample rollouts from the original experiments; the table reports the current benchmark results. Push-T is measured by maximum target coverage, while the other tasks use success rate.</p>
-  <p class="simulation-guide"><strong>Inside each video:</strong> the first (top) row shows the ground-truth environment, the second (bottom) row shows world-model predictions, and the second (right) column shows the goal.</p>
+  <p>We compare planning with direct policy execution on Push-T, LIBERO Goal, and Block Pushing. Push-T is measured by maximum target coverage, while the other tasks use success rate.</p>
+  <article class="task simulation-showcase" id="pusht-gated"><h3>Planning on demand in Push-T</h3>
+    <p class="task-description">A single-goal rollout with the trained uncertainty head, world model, and goal value. The blue and amber labels show the controller's actual decisions.</p>
+    <figure class="video-figure">
+      <h4 class="video-label"><span class="method-name">ForesightIL</span> <span class="video-subtitle">WM + BC</span></h4>
+      <div class="player gated">
+        <video preload="none" muted playsinline poster="assets/images/pusht-gated.webp" data-src="assets/videos/pusht-gated.mp4" aria-label="Push-T with uncertainty-guided ForesightIL"></video>
+        <button class="play-button" type="button" aria-label="Play Push-T with uncertainty-guided ForesightIL"><span aria-hidden="true">▶</span> Play video</button>
+        <p class="video-error" hidden>Video could not load. <a href="assets/videos/pusht-gated.mp4">Open the MP4</a>.</p>
+      </div>
+      <figcaption>This rollout finishes at 98.6% target overlap and was selected from eight initial states. The first second uses planning to collect observation history; no uncertainty value is available yet. The trace then shows the measured uncertainty divided by its fixed planning threshold. Playback follows simulation time at 1×.</figcaption>
+      <noscript><p><a href="assets/videos/pusht-gated.mp4">Watch Push-T with uncertainty-guided ForesightIL</a></p></noscript>
+    </figure>
+  </article>
+  <h3 class="subsection-title">Simulation comparisons</h3>
+  <p class="simulation-guide">These comparison clips are from the original experiments; the table reports the current benchmark results. <strong>Inside each comparison video:</strong> the first (top) row shows the ground-truth environment, the second (bottom) row shows world-model predictions, and the second (right) column shows the goal.</p>
   <div class="sim-grid"><article class="sim-task"><h3>Push-T</h3><figure class="video-figure">
       <h4 class="video-label"><span class="method-name">ForesightIL</span></h4>
       <div class="player square">

@@ -27,8 +27,9 @@ assert len(soup.select('main table'))==5
 assert not soup.select('#analysis table')
 assert soup.select_one('main img')['src']=='assets/images/hero.webp'
 assert html.index('<section id="simulation"') < html.index('<section id="robots"')
-assert len(soup.select('#simulation video'))==6
-assert all(v.find_parent('details') is None for v in soup.select('#simulation video'))
+assert len(soup.select('#simulation .sim-grid video'))==6
+assert len(soup.select('#pusht-gated video'))==1
+assert all(v.find_parent('details') is None for v in soup.select('#simulation .sim-grid video'))
 assert not list((ROOT/'assets').rglob('*.pdf'))
 assert not re.search(r'author|anonymous|6870|\.pdf',html,re.I)
 assert all(img.get('alt') for img in soup.select('main img'))
@@ -79,7 +80,7 @@ with sync_playwright() as p:
     assert not initial['overflow']
     assert page.evaluate('getComputedStyle(document.body).backgroundColor')=='rgb(255, 255, 255)'
     assert page.locator('main table:visible').count()==5
-    assert page.locator('#simulation video:visible').count()==6
+    assert page.locator('#simulation .sim-grid video:visible').count()==6
     page.screenshot(path=str(OUT/'desktop.png'))
     # Open every section and decode every image before capturing section previews.
     page.locator('details').evaluate_all('(els)=>els.forEach(e=>e.open=true)')
@@ -112,7 +113,7 @@ with sync_playwright() as p:
         for key in data:
             assert mobile.locator('#result-'+key).is_visible()
             assert not mobile.evaluate('document.documentElement.scrollWidth>innerWidth'),(width,key)
-        assert mobile.locator('#simulation video:visible').count()==6
+        assert mobile.locator('#simulation .sim-grid video:visible').count()==6
         mobile_reports.append({'width':width,'no_page_overflow':True,'all_tables_and_simulation_videos_visible':True})
         if width==390:
             mobile.locator('#toy-kitchen').evaluate('(e)=>window.scrollTo({top:scrollY+e.getBoundingClientRect().top-108,behavior:"instant"})')
@@ -130,7 +131,7 @@ assert not bad_responses,bad_responses
 report={'pdf_table_rows_verified':row_counts,'video_decode_checks':media_reports,'browser_players':playback,
         'initial_load':initial,'initial_video_requests':0,'external_requests':0,'javascript_errors':errors,
         'http_errors':bad_responses,'mobile':mobile_reports,'figure_dialog_keyboard_close':True,
-        'hero_is_first_figure':True,'simulation_before_real_robots':True,'all_six_simulation_videos_visible':True,'paper_download_removed':True,
+        'hero_is_first_figure':True,'simulation_before_real_robots':True,'all_six_simulation_videos_visible':True,'pusht_gated_showcase_visible':True,'paper_download_removed':True,
         'no_javascript_fallback':True,'no_commits_or_pushes_performed':True}
 (OUT/'validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({'table_rows_checked':sum(row_counts.values()),'videos_decoded':len(media_reports),'players_tested':len(playback),'initial_load':initial,'mobile':mobile_reports,'errors':errors}),flush=True)

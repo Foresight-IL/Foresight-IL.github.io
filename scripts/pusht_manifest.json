@@ -1,0 +1,41 @@
+{
+  "episode": 4,
+  "environment_seed": 397,
+  "source_npz_sha256": "4cee908ac5e12ea81e4d2d3e58c11e56eaa87c0cea0f113f45ef42c2a2c2131b",
+  "source_json_sha256": "5b50a963d242f6dbf57aaabe9856fff90f7b254509e458844d018d70196c0ca4",
+  "renderer_sha256": "7575c3a05149531a400d78f7c506dc36fc07be1793d49f91851094f224d286b5",
+  "mapping_sha256": "226a709d36e625d50570950e3e6f5ac8ecce44228bd31c1b950e862f5d4da89e",
+  "frames": 483,
+  "fps": 30,
+  "duration_seconds": 16.1,
+  "source_frames": 151,
+  "source_environment_duration_seconds": 15.0,
+  "resolution": [
+    1448,
+    940
+  ],
+  "single_environment_view": true,
+  "environment_rect": [
+    384,
+    22,
+    680,
+    680
+  ],
+  "palette": {
+    "policy": "#007CB6",
+    "planning": "#CA8A2B",
+    "threshold": "#188476"
+  },
+  "timing": "Each recorded 10 Hz frame is shown 3 times at 30 fps; final frame held 1 additional second. No omitted or interpolated frames. 1\u00d7 means simulation time, not GPU wall-clock time.",
+  "execution_alignment": "Actual decisions apply from start_frame inclusive to end_frame_exclusive. Final frame clamps the last decision. Sigma is the proposed BC-action uncertainty used by that executed decision.",
+  "uncertainty_display": "Recorded sigma divided by fixed recorded threshold; no smoothing. Null warmup values remain absent.",
+  "warmup": "Actual mode is planning; gray trace region indicates missing uncertainty context, amber execution band preserves planning.",
+  "coverage_display": "Recorded instantaneous block/target intersection over target area; not a success-rate estimate.",
+  "final_coverage": 0.9863994412404705,
+  "peak_coverage": 0.9863996102390786,
+  "plan_fraction": 0.3,
+  "poster_source_frame": 60,
+  "asset": "assets/videos/pusht-gated.mp4",
+  "sha256": "bda147450371cd1c60fac0117b5a10e5a5bd867ea61d3b93a301718bc98cb6f2",
+  "selection": "Illustrative successful rollout selected after reviewing eight initial states; not an aggregate benchmark result."
+}

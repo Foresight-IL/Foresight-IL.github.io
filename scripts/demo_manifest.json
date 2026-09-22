@@ -3262,10 +3262,12 @@
   "overview": {
     "asset": "assets/videos/overview.mp4",
     "duration_seconds": 179,
-    "sha256": "64a561375855c4e42594957520e9796f44207f04dbc1a48ab1a5be2983ecd327",
+    "sha256": "cd94e43ffa2a91f53b1af7f08c5276ef79fbfba89f007298c87e096a17a32b0a",
     "website_only": true,
     "attribution_line_removed": true,
     "submission_number_removed": true,
-    "new_camera_edits_embedded": true
+    "new_camera_edits_embedded": true,
+    "pusht_showcase_embedded": true,
+    "slide_count": 16
   }
 }

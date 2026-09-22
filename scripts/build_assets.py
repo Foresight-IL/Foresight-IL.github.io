@@ -57,6 +57,14 @@ jobs=[(stem,2) for stem in ['pp_0','pp_1','pp_2','pp_3','pp_fail_0','pp_fail_1',
 jobs += [(stem,1) for stem in ['blockpush_plan','blockpush_no_plan','pusht_plan','pusht_no_plan','libero_goal_plan','libero_goal_no_plan']]
 with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:manifest.extend(pool.map(legacy_copy,jobs))
 subprocess.run([sys.executable,str(SITE/'scripts/build_web_demos.py'),str(SOURCE)],check=True)
-manifest.extend(json.loads((SITE/'scripts/demo_manifest.json').read_text())['clips'])
+demo_report=json.loads((SITE/'scripts/demo_manifest.json').read_text())
+manifest.extend(demo_report['clips'])
+manifest.append(demo_report['overview'])
 (SITE/'scripts/media_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+pusht=SOURCE/'icra27_assets/pusht_showcase/selected'
+if (pusht/'pusht_gated_demo.mp4').is_file():
+    subprocess.run([sys.executable,str(SITE/'scripts/import_pusht_demo.py'),str(pusht)],check=True)
+elif (SITE/'scripts/pusht_manifest.json').is_file():
+    manifest.append(json.loads((SITE/'scripts/pusht_manifest.json').read_text()))
+    (SITE/'scripts/media_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print('Website assets built. No manuscript PDF is copied into the site.')

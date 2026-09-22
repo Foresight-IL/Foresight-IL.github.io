@@ -69,8 +69,13 @@ html=f'''<!doctype html>
 
 <section id="simulation" class="section">
   <h2>Simulation Experiments</h2>
-  <p>We compare planning with direct policy execution on Push-T, LIBERO Goal, and Block Pushing. The videos show sample rollouts from the original experiments; the table reports the current benchmark results. Push-T is measured by maximum target coverage, while the other tasks use success rate.</p>
-  <p class="simulation-guide"><strong>Inside each video:</strong> the first (top) row shows the ground-truth environment, the second (bottom) row shows world-model predictions, and the second (right) column shows the goal.</p>
+  <p>We compare planning with direct policy execution on Push-T, LIBERO Goal, and Block Pushing. Push-T is measured by maximum target coverage, while the other tasks use success rate.</p>
+  <article class="task simulation-showcase" id="pusht-gated"><h3>Planning on demand in Push-T</h3>
+    <p class="task-description">A single-goal rollout with the trained uncertainty head, world model, and goal value. The blue and amber labels show the controller's actual decisions.</p>
+    {video('pusht-gated','Push-T with uncertainty-guided ForesightIL','This rollout finishes at 98.6% target overlap and was selected from eight initial states. The first second uses planning to collect observation history; no uncertainty value is available yet. The trace then shows the measured uncertainty divided by its fixed planning threshold. Playback follows simulation time at 1×.','<span class="method-name">ForesightIL</span> <span class="video-subtitle">WM + BC</span>',shape='gated')}
+  </article>
+  <h3 class="subsection-title">Simulation comparisons</h3>
+  <p class="simulation-guide">These comparison clips are from the original experiments; the table reports the current benchmark results. <strong>Inside each comparison video:</strong> the first (top) row shows the ground-truth environment, the second (bottom) row shows world-model predictions, and the second (right) column shows the goal.</p>
   <div class="sim-grid">{sim_videos}</div>
   <h3 class="subsection-title">Simulation results</h3>{result('simulation')}
 </section>

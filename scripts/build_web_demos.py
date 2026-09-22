@@ -221,25 +221,34 @@ def poster(name,time):
 
 def overview():
     # The website copy omits the title-slide attribution line and submission ID.
-    # The already-reviewed scientific slide sequence and 179 s timing are retained.
+    # Read slide positions and timing from the reviewed submission manifest.
     source=SOURCE/'icra27_assets/walkthrough_export'
+    slides=json.loads((SOURCE/'icra27_assets/slide_manifest.json').read_text())
+    aliases={'toy_kitchen_demo':'toy-kitchen','desk_cleanup_demo':'desk-cleanup',
+             'toy-kitchen':'toy-kitchen','desk-cleanup':'desk-cleanup','pusht':'pusht-gated'}
     with tempfile.TemporaryDirectory(prefix='foresight-web-overview-') as tmp:
         tmp=Path(tmp);segments=[]
-        for i in range(1,16):
-            if i not in [1,9,10,15]:segments.append(source/f'slide_{i:02d}.mp4');continue
+        for spec in slides:
+            i=spec['slide'];frames=round(spec['duration_seconds']*30)
+            movie=next((e for e in spec['elements'] if e['type']=='movie'),None)
+            if i not in [1,len(slides)] and not movie:
+                segments.append(source/f'slide_{i:02d}.mp4');continue
             dest=tmp/f'slide_{i:02d}.mp4'
-            if i in [1,15]:
+            if i in [1,len(slides)]:
                 vf='drawbox=x=95:y=575:w=920:h=57:color=white:t=fill' if i==1 else 'drawbox=x=96:y=964:w=1750:h=48:color=white:t=fill'
                 args=['-i',str(source/f'slide_{i:02d}.mp4'),'-vf',vf]
-                frames=180
             else:
-                name='toy-kitchen' if i==9 else 'desk-cleanup';frames=570 if i==9 else 720
+                name=aliases[Path(movie['path']).stem]
+                # The revised submission embeds these exact website clips, so
+                # its verified segment already preserves the title and geometry.
+                if sha(SOURCE/movie['path'])==sha(VIDEOS/(name+'.mp4')):
+                    segments.append(source/f'slide_{i:02d}.mp4');continue
                 # White canvas matches the surrounding slide background.
-                title='Toy Kitchen' if i==9 else 'Desk Cleanup'
+                title=tmp/f'title_{i:02d}.txt';title.write_text(spec['title'])
                 vf=('scale=1920:1000:force_original_aspect_ratio=decrease:force_divisible_by=2,'
-                    'pad=1920:1080:(ow-iw)/2:60:color=white,tpad=stop_mode=clone:stop_duration=2,'
+                    f'pad=1920:1080:(ow-iw)/2:60:color=white,tpad=stop_mode=clone:stop_duration={spec["duration_seconds"]},'
                     'drawtext=fontfile=/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf:'
-                    f'text={title}:x=68:y=10:fontsize=38:fontcolor=0x27343C')
+                    f'textfile={title}:x=68:y=10:fontsize=38:fontcolor=0x27343C')
                 args=['-i',str(VIDEOS/(name+'.mp4')),'-vf',vf]
             subprocess.run(['ffmpeg','-v','error','-y',*args,'-an','-frames:v',str(frames),'-r','30',
                 '-c:v','libx264','-crf','21','-preset','medium','-pix_fmt','yuv420p','-profile:v','high','-level:v','4.0',
@@ -258,7 +267,10 @@ if __name__=='__main__':
     for name,t in [('toy-kitchen',4),('desk-cleanup',4),('toy-kitchen-bc',8),('desk-cleanup-bc',7)]:poster(name,t)
     print('Four website demos rebuilt from original cameras.',flush=True)
     overview()
-    overview_report={'asset':'assets/videos/overview.mp4','duration_seconds':179,'sha256':sha(VIDEOS/'overview.mp4'),
-                     'website_only':True,'attribution_line_removed':True,'submission_number_removed':True,'new_camera_edits_embedded':True}
+    slides=json.loads((SOURCE/'icra27_assets/slide_manifest.json').read_text())
+    overview_report={'asset':'assets/videos/overview.mp4','duration_seconds':sum(s['duration_seconds'] for s in slides),'sha256':sha(VIDEOS/'overview.mp4'),
+                     'website_only':True,'attribution_line_removed':True,'submission_number_removed':True,'new_camera_edits_embedded':True,
+                     'pusht_showcase_embedded':any(Path(e.get('path','')).stem=='pusht' for s in slides for e in s['elements'] if e['type']=='movie'),
+                     'slide_count':len(slides)}
     (SITE/'scripts/demo_manifest.json').write_text(json.dumps({'bc_resolution':GATED_SIZE,'wm_bc_resolution':GATED_SIZE,'camera_rectangles':RECTS,'palette':{'policy':BLUE,'planning':AMBER,'value':TEAL,'ink':INK},'clips':reports,'overview':overview_report},indent=2)+'\n')
     print('Website overview rebuilt; original submission files untouched.',flush=True)
