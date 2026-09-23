@@ -3453,14 +3453,51 @@
   },
   {
     "asset": "assets/videos/overview.mp4",
+    "source": "icra27_assets/submission_video_v3",
+    "source_video_sha256": "cfc19987ac89c4ddf2159aaf772c1e3a7ae5fb6fa79af23c5692ae06c3d78fa2",
     "duration_seconds": 179,
-    "sha256": "cd94e43ffa2a91f53b1af7f08c5276ef79fbfba89f007298c87e096a17a32b0a",
+    "frames": 5370,
+    "fps": 30,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "sha256": "268921effb23f79c125fff72a2b9674efe5c7673ecc7434161bb5a5f24eeccaf",
     "website_only": true,
-    "attribution_line_removed": true,
-    "submission_number_removed": true,
-    "new_camera_edits_embedded": true,
-    "pusht_showcase_embedded": true,
-    "slide_count": 16
+    "venue_labels_removed": true,
+    "source_video_unchanged": true,
+    "scene_count": 11,
+    "unchanged_scene_streams": [
+      "desk",
+      "method",
+      "gate",
+      "pusht",
+      "simulation",
+      "latency",
+      "results",
+      "close"
+    ],
+    "redacted_scene_regions": {
+      "title": [
+        90,
+        950,
+        465,
+        55
+      ],
+      "openloop": [
+        90,
+        1016,
+        285,
+        48
+      ],
+      "candidates": [
+        90,
+        1016,
+        285,
+        48
+      ]
+    },
+    "second_scene_title": "Complete multi-step tasks with ForesightIL"
   },
   {
     "episode": 4,
