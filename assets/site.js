@@ -87,3 +87,26 @@ dialog.addEventListener('close', () => {
   document.body.classList.remove('dialog-open');
   if (lastFigureLink) lastFigureLink.focus({preventScroll:true});
 });
+
+// Outline: open/close on small screens, and mark the section in view.
+const sidenav = document.querySelector('.sidenav');
+const navToggle = sidenav.querySelector('.nav-toggle');
+navToggle.addEventListener('click', () => {
+  const open = sidenav.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', String(open));
+});
+const outlineLinks = [...sidenav.querySelectorAll('nav a')];
+outlineLinks.forEach(link => link.addEventListener('click', () => {
+  sidenav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false');
+}));
+const outlineTargets = outlineLinks.map(link => document.querySelector(link.getAttribute('href')));
+const markCurrent = () => {
+  const line = innerHeight * 0.3;
+  let current = 0;
+  outlineTargets.forEach((target, i) => { if (target.getBoundingClientRect().top <= line) current = i; });
+  if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4) current = outlineTargets.length - 1;
+  outlineLinks.forEach((link, i) => link.classList.toggle('current', i === current));
+};
+addEventListener('scroll', markCurrent, {passive: true});
+addEventListener('resize', markCurrent);
+markCurrent();
